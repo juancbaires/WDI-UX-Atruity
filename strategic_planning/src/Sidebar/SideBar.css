@@ -1,4 +1,10 @@
 .SideBar {
     width: 250px;
     margin-top: -150px;
+    border-top: #186da5 solid 2px;
+    background-color: #0b507e;
 } 
+
+li {
+    border-bottom: #186da5 solid 1px;
+}

@@ -9,7 +9,11 @@ class Header extends Component {
     return (
       <div>
         <nav>
-          <img class="nav justify-content-right" src="logo.png" alt="Atruity" />
+          <img
+            class="nav justify-content-right"
+            src="./logo.png"
+            alt="Atruity"
+          />
           <section className="centerLinks">
             <ul class="nav justify-content-center">
               <li class="nav-item">
