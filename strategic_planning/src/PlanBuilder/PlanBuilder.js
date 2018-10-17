@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import SideBar from "../Sidebar/SideBar"
+import SideBar from "../SideBar/SideBar"
 import MainDisplay from "../MainDisplay/MainDisplay"
 
 
 class PlanBuilder extends Component {
     render() {
-        console.log(this.props)
+        console.log(this.props.planner)
 
         return (
 

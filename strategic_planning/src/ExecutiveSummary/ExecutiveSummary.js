@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SideBar from "../SideBar/SideBar"
 
-class SuccessMetric extends Component {
+class ExecutiveSummary extends Component {
     render() {
         return (
             <div>
@@ -11,4 +11,4 @@ class SuccessMetric extends Component {
     }
 }
 
-export default SuccessMetric;
+export default ExecutiveSummary;
