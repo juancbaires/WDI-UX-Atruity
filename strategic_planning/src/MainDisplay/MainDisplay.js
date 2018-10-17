@@ -5,7 +5,6 @@ class MainDisplay extends Component {
     return (
       <div className="MainDisplay">
         <main className="mainBox">
-          <form />
         </main>
       </div>
     );
