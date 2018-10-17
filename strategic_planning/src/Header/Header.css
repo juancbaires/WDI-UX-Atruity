@@ -1,0 +1,10 @@
+.centerLinks {
+    display: inline-block;
+    font-size: 10px;
+}
+a {
+    color: #a8a4a4;
+}
+img {
+    margin: 5px, 0, 0, 10px;
+}
