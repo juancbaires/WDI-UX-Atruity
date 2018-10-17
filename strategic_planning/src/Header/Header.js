@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Bootstrap, { Button } from "bootstrap-4-react";
 import "./Header.css";
 import "./logo.png";
+import SideBar from "../Sidebar/SideBar";
+
 class Header extends Component {
   render() {
     return (
