@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import "./App.css";
-import Header from "../Header/Header";
 import MainDisplay from "../MainDisplay/MainDisplay";
 import SideBar from "../Sidebar/SideBar";
 import { Switch, Link, Route } from "react-router-dom"
-
+import Dashboard from "../Dashboard/Dashboard"
+import RoadMap from "../RoadMap/RoadMap"
+import LearningHub from "../LearningHub/LearningHub"
+import PublishedPlans from "../PublishPlans/PublishPlans"
+import PlanBuilder from "../PlanBuilder/PlanBuilder"
 let PlannerObj = [
   {
     intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
@@ -38,18 +41,55 @@ let PlannerObj = [
 class App extends Component {
   render() {
     this.state = {
-      PlannerObj: PlannerObj
+      planner: PlannerObj
     }
     return (
       <div className="App">
-        <Header />
+        <nav>
+          <img
+            class="nav justify-content-right"
+            src="/logo.png"
+            alt="Atruity"
+          />
+          <section className="centerLinks">
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <Link to="/dashboard"> <a class="nav-link dashboard" href="/">
+                  Dashboard
+                </a></Link>
+              </li>
+              <li class="nav-item roadmap">
+                <Link to="/roadmap"><a class="nav-link" href="/">
+                  Roadmap
+                </a></Link>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link learning-hub" href="/">
+                  Learning Hub
+                </a>
+              </li>
+              <li class="nav-item">
+                <Link to="/planbuilder"><a class="nav-link plan-builder" href="/">
+                  Plan Builder
+                </a></Link>
+              </li>
+              <li class="nav-item">
+                <Link to="/publishedplans"><a class="nav-link published-plans">
+                  Published Plans
+                </a></Link>
+              </li>
+            </ul>
+          </section>
+        </nav>
         <section>
-          <MainDisplay />
-          <SideBar />
         </section>
         <main>
           <Switch>
-            <Route path="/"></Route>
+            <Route path="/planbuilder" component={PlanBuilder}></Route>
+            <Route path="/publishedplans" component={PublishedPlans}></Route>
+            <Route path="/learninghub" component={LearningHub}></Route>
+            <Route path="/roadmap" component={RoadMap}></Route>
+            <Route path="/dashboard" component={Dashboard}></Route>
           </Switch>
         </main>
       </div>
