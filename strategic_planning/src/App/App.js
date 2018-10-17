@@ -14,12 +14,12 @@ import OrgStructure from "../OrgStructure/OrgStructure";
 import SuccesMetrics from "../SuccessMetrics/SuccessMetric";
 import Goals from "../Goals/Goals";
 import ExecutiveSummary from "../ExecutiveSummary/ExecutiveSummary";
+import logo from "./logo.png"
 
 let planner = [
   {
     name: "Apple",
-    intro:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
+
     visionStatement:
       "orem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
     swot:
@@ -35,8 +35,7 @@ let planner = [
   },
   {
     name: "Microsoft",
-    intro:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
+
     visionStatement:
       "orem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
     swot:
@@ -52,8 +51,7 @@ let planner = [
   },
   {
     name: "Sprint",
-    intro:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
+
     visionStatement:
       "orem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
     swot:
@@ -79,7 +77,7 @@ class App extends Component {
         <nav>
           <img
             class="nav justify-content-right"
-            src="./../public/logo.png"
+            src={logo}
             alt="Atruity"
           />
           <section className="centerLinks">
@@ -121,9 +119,7 @@ class App extends Component {
             </ul>
           </section>
         </nav>
-        <section>
-          <SideBar />
-        </section>
+
         <main>
           <Switch>
             <Route path="/executivesummary" component={ExecutiveSummary} />
@@ -142,10 +138,16 @@ class App extends Component {
                 />
               )}
             />
-            <Route path="/publishedplans" component={PublishedPlans} />
+            <Route path="/dashboard" component={Dashboard} />
             <Route path="/learninghub" component={LearningHub} />
             <Route path="/roadmap" component={RoadMap} />
-            <Route path="/dashboard" component={Dashboard} />
+            <Route path="/publishedplans" render={props => (
+              <PublishedPlans
+                {...this.state}
+                {...this.props}
+                planner={this.state.planner}
+              />
+            )} />
           </Switch>
         </main>
       </div>

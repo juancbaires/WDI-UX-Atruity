@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import SideBar from "../SideBar/SideBar"
 
 class LearningHub extends Component {
     render() {
         return (
             <div>
-                <h1>Learning Hub</h1>
+                <SideBar />
             </div>
         );
     }

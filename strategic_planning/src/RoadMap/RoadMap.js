@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-
+import SideBar from "../SideBar/SideBar"
 class RoadMap extends Component {
     render() {
         return (
             <div>
-                <h1>Road Map</h1>
+                <SideBar />
             </div>
         );
     }

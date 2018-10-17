@@ -1,13 +1,16 @@
 .SideBar {
     width: 250px;
-    border-top: #186da5 solid 2px;
-    background-color: #0b507e;
+    border-top:  rgba(40, 49, 73, 1) solid 2px;
+    background-color: rgba(40, 49, 73, 1);
     height: 100vh;
 } 
 
 li {
-    border-bottom: #186da5 solid 1px;
+    border-bottom:  rgba(40, 49, 73, 1) solid 1px;
 }
 a:hover {
+    color: white;
+}
+Link:hover {
     color: white;
 }
