@@ -8,7 +8,8 @@ import RoadMap from "../RoadMap/RoadMap"
 import LearningHub from "../LearningHub/LearningHub"
 import PublishedPlans from "../PublishPlans/PublishPlans"
 import PlanBuilder from "../PlanBuilder/PlanBuilder"
-let PlannerObj = [
+
+let planner = [
   {
     intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
     visionStatement: "orem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
@@ -39,10 +40,11 @@ let PlannerObj = [
 ]
 
 class App extends Component {
+  state = {
+    planner: planner
+  }
   render() {
-    this.state = {
-      planner: PlannerObj
-    }
+
     return (
       <div className="App">
         <nav>
@@ -85,7 +87,7 @@ class App extends Component {
         </section>
         <main>
           <Switch>
-            <Route path="/planbuilder" component={PlanBuilder}></Route>
+            <Route path="/planbuilder" render={props => <PlanBuilder {...this.state}{...this.props} planner={this.state.planner} />}></Route>
             <Route path="/publishedplans" component={PublishedPlans}></Route>
             <Route path="/learninghub" component={LearningHub}></Route>
             <Route path="/roadmap" component={RoadMap}></Route>
