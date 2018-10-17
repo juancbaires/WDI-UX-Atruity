@@ -1,0 +1,14 @@
+.executive {
+    width: 500px;
+    margin-left: 400px;
+}
+.grey {
+    height: 700px;
+}
+.btn {
+    margin-top: 5px;
+    background-color:  rgba(40, 49, 73, 1);
+}
+.btn:hover {
+    background-color:  rgba(40, 49, 73, 1);
+}

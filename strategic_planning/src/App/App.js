@@ -11,7 +11,7 @@ import PlanBuilder from "../PlanBuilder/PlanBuilder";
 import Mission from "../Mission/Mission";
 import SWOT from "../SWOT/SWOT";
 import OrgStructure from "../OrgStructure/OrgStructure";
-import SuccesMetrics from "../SuccessMetrics/SuccessMetric";
+import SuccessMetrics from "../SuccessMetrics/SuccessMetric";
 import Goals from "../Goals/Goals";
 import ExecutiveSummary from "../ExecutiveSummary/ExecutiveSummary";
 import logo from "./logo.png"
@@ -32,38 +32,6 @@ let planner = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
     executiveSummary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget."
-  },
-  {
-    name: "Microsoft",
-
-    visionStatement:
-      "orem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
-    swot:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
-    orgStructure:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
-    successMetrics:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
-    goals:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
-    executiveSummary:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget."
-  },
-  {
-    name: "Sprint",
-
-    visionStatement:
-      "orem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
-    swot:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
-    orgStructure:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
-    successMetrics:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
-    goals:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
-    executiveSummary:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget."
   }
 ];
 
@@ -71,6 +39,14 @@ class App extends Component {
   state = {
     planner: planner
   };
+
+  addplan = (plan) => {
+    let newPlan = [...this.state.planner, plan]
+    this.setState({
+      birds: newPlan
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -122,12 +98,55 @@ class App extends Component {
 
         <main>
           <Switch>
-            <Route path="/executivesummary" component={ExecutiveSummary} />
-            <Route path="/goals" component={Goals} />
-            <Route path="/successmetrics" component={SuccesMetrics} />
-            <Route path="/orgstructure" component={OrgStructure} />
-            <Route path="/swot" component={SWOT} />
-            <Route path="/mission" component={Mission} />
+            <Route path="/executivesummary" render={props => (
+              <ExecutiveSummary
+                {...this.state}
+                {...this.props}
+                planner={this.state.planner}
+              />
+            )}
+            /> />
+            <Route path="/goals" render={props => (
+              <Goals
+                {...this.state}
+                {...this.props}
+                planner={this.state.planner}
+                addplan={this.addplan}
+              />
+            )}
+            />/>
+            <Route path="/successmetrics" render={props => (
+              <SuccessMetrics
+                {...this.state}
+                {...this.props}
+                planner={this.state.planner}
+              />
+            )}
+            /> />
+            <Route path="/orgstructure" render={props => (
+              <OrgStructure
+                {...this.state}
+                {...this.props}
+                planner={this.state.planner}
+              />
+            )}
+            />/>
+            <Route path="/swot" render={props => (
+              <SWOT
+                {...this.state}
+                {...this.props}
+                planner={this.state.planner}
+              />
+            )}
+            />/>
+            <Route path="/mission" render={props => (
+              <Mission
+                {...this.state}
+                {...this.props}
+                planner={this.state.planner}
+              />
+            )}
+            />/>
             <Route
               path="/planbuilder"
               render={props => (
