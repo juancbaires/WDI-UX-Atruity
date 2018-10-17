@@ -2,3 +2,13 @@
 form {
     margin-top: -450px;
 }
+.mainBox {
+    width: 300px;
+    height: 250px;
+    /* display: flex;
+    align-content: center; */
+    background-color: #0b507e;
+    margin-left: 500px;
+    padding-top: -150px;
+
+}
