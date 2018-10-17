@@ -6,7 +6,13 @@
 a {
     color: #a8a4a4;
 }
+a:hover {
+    color: black;
+}
 img {
     margin: 5px, 0, 0, 10px;
     float: left;
+}
+nav {
+    background-color: white;
 }
