@@ -1,16 +1,23 @@
 import React, { Component } from "react";
 import "./App.css";
 import MainDisplay from "../MainDisplay/MainDisplay";
-import SideBar from "../Sidebar/SideBar";
+import SideBar from "../SideBar/SideBar";
 import { Switch, Link, Route } from "react-router-dom";
 import Dashboard from "../Dashboard/Dashboard";
 import RoadMap from "../RoadMap/RoadMap";
 import LearningHub from "../LearningHub/LearningHub";
 import PublishedPlans from "../PublishPlans/PublishPlans";
 import PlanBuilder from "../PlanBuilder/PlanBuilder";
+import Mission from "../Mission/Mission";
+import SWOT from "../SWOT/SWOT";
+import OrgStructure from "../OrgStructure/OrgStructure";
+import SuccesMetrics from "../SuccessMetrics/SuccessMetric";
+import Goals from "../Goals/Goals";
+import ExecutiveSummary from "../ExecutiveSummary/ExecutiveSummary";
 
 let planner = [
   {
+    name: "Apple",
     intro:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
     visionStatement:
@@ -27,6 +34,7 @@ let planner = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget."
   },
   {
+    name: "Microsoft",
     intro:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
     visionStatement:
@@ -43,6 +51,7 @@ let planner = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget."
   },
   {
+    name: "Sprint",
     intro:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
     visionStatement:
@@ -91,9 +100,11 @@ class App extends Component {
                 </Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link learning-hub" href="/">
-                  Learning Hub
-                </a>
+                <Link to="/learninghub">
+                  <a class="nav-link learning-hub" href="/">
+                    Learning Hub
+                  </a>
+                </Link>
               </li>
               <li class="nav-item">
                 <Link to="/planbuilder">
@@ -110,9 +121,17 @@ class App extends Component {
             </ul>
           </section>
         </nav>
-        <section />
+        <section>
+          <SideBar />
+        </section>
         <main>
           <Switch>
+            <Route path="/executivesummary" component={ExecutiveSummary} />
+            <Route path="/goals" component={Goals} />
+            <Route path="/successmetrics" component={SuccesMetrics} />
+            <Route path="/orgstructure" component={OrgStructure} />
+            <Route path="/swot" component={SWOT} />
+            <Route path="/mission" component={Mission} />
             <Route
               path="/planbuilder"
               render={props => (
