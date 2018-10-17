@@ -7,7 +7,39 @@ class SideBar extends Component {
     return (
       <div className="SideBar">
         <ul class="nav flex-column">
-          <li>Drop Down</li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Plan Type
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">
+                Strategic Plan
+              </a>
+              <a class="dropdown-item" href="#">
+                Startup Plan
+              </a>
+              <a class="dropdown-item" href="#">
+                Internal Business Plan
+              </a>
+              <a class="dropdown-item" href="#">
+                Feasibility Plan
+              </a>
+              <a class="dropdown-item" href="#">
+                Operations Plan
+              </a>
+              <a class="dropdown-item" href="#">
+                Growth Plan
+              </a>
+            </div>
+          </li>
           <li class="nav-item">
             <a class="nav-link active" href="#">
               Step 1 Intro
