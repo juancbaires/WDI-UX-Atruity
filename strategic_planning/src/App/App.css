@@ -4,3 +4,22 @@
   height: 600px;;
 }
 
+.centerLinks {
+  display: inline-block;
+  font-size: 12px;
+  height: 50px;
+
+}
+.nav-item {
+  color: #a8a4a4;
+}
+a:hover {
+  color: black;
+}
+img {
+  margin: 5px, 0, 0, 10px;
+  float: left;
+}
+nav {
+  background-color: white;
+}
