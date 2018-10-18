@@ -10,6 +10,7 @@
 .btn {
     margin-top: 5px;
     background-color:  rgba(40, 49, 73, 1);
+    color:white;
 }
 .btn:hover {
     background-color:  rgba(40, 49, 73, 1);

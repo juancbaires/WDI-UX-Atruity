@@ -18,7 +18,7 @@ class PlanBuilder extends Component {
               rows="8"
               placeholder="This is where a video would be!"
             />
-            <button type="button" class="btn btn-primary btn-lg">
+            <button type="button" class="btn">
               Play
             </button>
           </div>

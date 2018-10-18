@@ -25,7 +25,7 @@ class ExecutiveSummary extends Component {
                     <div class="form-group">
                         <h2 for="exampleFormControlTextarea1">Executive Summary</h2>
                         <textarea class="form-control" id="" rows="8" placeholder={this.props.planner[0].executiveSummary} onChange={this.handleChange}></textarea>
-                        <button onClick={this.handleSubmit} type="button" class="btn btn-primary btn-lg"><FontAwesomeIcon icon="pen" /></button>
+                        <button onClick={this.handleSubmit} type="button" class="btn"><FontAwesomeIcon icon="pen" /></button>
                     </div>
                 </form>
             </div>

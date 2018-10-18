@@ -24,7 +24,7 @@ class SWOT extends Component {
                     <div class="form-group">
                         <h2 for="exampleFormControlTextarea1">S.W.O.T.</h2>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder={this.props.planner[0].swot} onChange={this.handleChange}></textarea>
-                        <button onClick={this.handleSubmit} type="button" class="btn btn-primary btn-lg"><FontAwesomeIcon icon="pen" /></button>
+                        <button onClick={this.handleSubmit} type="button" class="btn"><FontAwesomeIcon icon="pen" /></button>
                     </div>
                 </form>
             </div>
