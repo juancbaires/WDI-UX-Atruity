@@ -73,45 +73,33 @@ class App extends Component {
     return (
       <div className="App">
         <nav>
-          <img
-            class="nav justify-content-right"
-            src={logo}
-            alt="Atruity"
-          />
+          <img class="nav justify-content-right" src={logo} alt="Atruity" />
           <section className="centerLinks">
             <ul class="nav justify-content-center">
               <li class="nav-item">
                 <Link to="/dashboard">
                   {" "}
-                  <a class="nav-link dashboard" href="/">
-                    Dashboard
-                  </a>
+                  <p class="nav-link dashboard">Dashboard</p>
                 </Link>
               </li>
               <li class="nav-item roadmap">
                 <Link to="/roadmap">
-                  <a class="nav-link" href="/">
-                    Roadmap
-                  </a>
+                  <p class="nav-link">Roadmap</p>
                 </Link>
               </li>
               <li class="nav-item">
                 <Link to="/learninghub">
-                  <a class="nav-link learning-hub" href="/">
-                    Learning Hub
-                  </a>
+                  <p class="nav-link learning-hub">Learning Hub</p>
                 </Link>
               </li>
               <li class="nav-item">
                 <Link to="/planbuilder">
-                  <a class="nav-link plan-builder" href="/">
-                    Plan Builder
-                  </a>
+                  <p class="nav-link plan-builder">Plan Builder</p>
                 </Link>
               </li>
               <li class="nav-item">
                 <Link to="/publishedplans">
-                  <a class="nav-link published-plans">Published Plans</a>
+                  <p class="nav-link published-plans">Published Plans</p>
                 </Link>
               </li>
             </ul>
@@ -119,82 +107,101 @@ class App extends Component {
         </nav>
 
         <main>
-          <Switch>
-            <Route path="/executivesummary" render={props => (
-              <ExecutiveSummary
-                {...this.state}
-                {...this.props}
-                planner={this.state.planner}
-                addSummary={this.addSummary}
+          <div>
+            <Switch>
+              <Route
+                path="/executivesummary"
+                render={props => (
+                  <ExecutiveSummary
+                    {...this.state}
+                    {...this.props}
+                    planner={this.state.planner}
+                  />
+                )}
+              />{" "}
               />
-            )}
-            /> />
-            <Route path="/goals" render={props => (
-              <Goals
-                {...this.state}
-                {...this.props}
-                planner={this.state.planner}
-                addplan={this.addplan}
+              <Route
+                path="/goals"
+                render={props => (
+                  <Goals
+                    {...this.state}
+                    {...this.props}
+                    planner={this.state.planner}
+                    addplan={this.addplan}
+                  />
+                )}
               />
-            )}
-            />/>
-            <Route path="/successmetrics" render={props => (
-              <SuccessMetrics
-                {...this.state}
-                {...this.props}
-                planner={this.state.planner}
-                addMetrics={this.addMetrics}
               />
-            )}
-            /> />
-            <Route path="/orgstructure" render={props => (
-              <OrgStructure
-                {...this.state}
-                {...this.props}
-                planner={this.state.planner}
-                addOrg={this.addOrg}
+              <Route
+                path="/successmetrics"
+                render={props => (
+                  <SuccessMetrics
+                    {...this.state}
+                    {...this.props}
+                    planner={this.state.planner}
+                  />
+                )}
+              />{" "}
               />
-            )}
-            />/>
-            <Route path="/swot" render={props => (
-              <SWOT
-                {...this.state}
-                {...this.props}
-                planner={this.state.planner}
-                addSwot={this.addSwot}
+              <Route
+                path="/orgstructure"
+                render={props => (
+                  <OrgStructure
+                    {...this.state}
+                    {...this.props}
+                    planner={this.state.planner}
+                  />
+                )}
               />
-            )}
-            />/>
-            <Route path="/mission" render={props => (
-              <Mission
-                {...this.state}
-                {...this.props}
-                planner={this.state.planner}
-                addMission={this.addMission}
               />
-            )}
-            />/>
-            <Route
-              path="/planbuilder"
-              render={props => (
-                <PlanBuilder
-                  {...this.state}
-                  {...this.props}
-                  planner={this.state.planner}
-                />
-              )}
-            />
-            <Route path="/dashboard" component={Dashboard} />
-            <Route path="/learninghub" component={LearningHub} />
-            <Route path="/roadmap" component={RoadMap} />
-            <Route path="/publishedplans" render={props => (
-              <PublishedPlans
-                {...this.state}
-                {...this.props}
-                planner={this.state.planner}
+              <Route
+                path="/swot"
+                render={props => (
+                  <SWOT
+                    {...this.state}
+                    {...this.props}
+                    planner={this.state.planner}
+                  />
+                )}
               />
-            )} />
-          </Switch>
+              />
+              <Route
+                path="/mission"
+                render={props => (
+                  <Mission
+                    {...this.state}
+                    {...this.props}
+                    planner={this.state.planner}
+                    addMission={this.addMission}
+                  />
+                )}
+              />
+              />
+              <Route
+                path="/planbuilder"
+                render={props => (
+                  <PlanBuilder
+                    {...this.state}
+                    {...this.props}
+                    planner={this.state.planner}
+                  />
+                )}
+              />
+              <Route path="/dashboard" component={Dashboard} />
+              <Route path="/learninghub" component={LearningHub} />
+              <Route path="/roadmap" component={RoadMap} />
+              <Route
+                path="/publishedplans"
+                render={props => (
+                  <PublishedPlans
+                    {...this.state}
+                    {...this.props}
+                    planner={this.state.planner}
+                  />
+                )}
+              />
+            </Switch>
+          </div>
         </main>
       </div>
     );
