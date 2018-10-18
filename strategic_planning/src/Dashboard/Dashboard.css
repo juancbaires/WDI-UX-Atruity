@@ -1,4 +1,12 @@
-.taskcard {
-    margin-top: 450px;
-    
+.card-body {
+   
+
+}
+ .container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+    overflow: initial;
 }

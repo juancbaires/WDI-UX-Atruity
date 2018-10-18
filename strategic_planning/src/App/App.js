@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-import MainDisplay from "../MainDisplay/MainDisplay";
 import SideBar from "../SideBar/SideBar";
 import { Switch, Link, Route } from "react-router-dom";
 import Dashboard from "../Dashboard/Dashboard";
@@ -14,12 +13,12 @@ import OrgStructure from "../OrgStructure/OrgStructure";
 import SuccessMetrics from "../SuccessMetrics/SuccessMetric";
 import Goals from "../Goals/Goals";
 import ExecutiveSummary from "../ExecutiveSummary/ExecutiveSummary";
-import logo from "./logo.png"
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPen } from '@fortawesome/free-solid-svg-icons'
-console.log('this')
-library.add(faPen)
+import logo from "./logo.png";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPen } from "@fortawesome/free-solid-svg-icons";
+console.log("this");
+library.add(faPen);
 
 let planner = [
   {
@@ -56,33 +55,32 @@ class App extends Component {
         employee: "Felix",
         task: "do some work!"
       }
-
     ]
   };
   //add a goal to planner data
-  addplan = (plan) => {
-    this.state.planner[0].goals = plan
-  }
-  //edit mission prop 
-  addMission = (mission) => {
-    this.state.planner[0].visionStatement = mission
-  }
+  addplan = plan => {
+    this.state.planner[0].goals = plan;
+  };
+  //edit mission prop
+  addMission = mission => {
+    this.state.planner[0].visionStatement = mission;
+  };
   // edit swot
-  addSwot = (swotie) => {
-    this.state.planner[0].swot = swotie
-  }
+  addSwot = swotie => {
+    this.state.planner[0].swot = swotie;
+  };
   // editing an Org
-  addOrg = (org) => {
-    this.state.planner[0].orgStructure = org
-  }
+  addOrg = org => {
+    this.state.planner[0].orgStructure = org;
+  };
   // editing a Metric
-  addMetrics = (metric) => {
-    this.state.planner[0].successMetrics = metric
-  }
+  addMetrics = metric => {
+    this.state.planner[0].successMetrics = metric;
+  };
   // edit summary
-  addSummary = (sum) => {
-    this.state.planner[0].executiveSummary = sum
-  }
+  addSummary = sum => {
+    this.state.planner[0].executiveSummary = sum;
+  };
 
   render() {
     return (
@@ -206,13 +204,16 @@ class App extends Component {
                   />
                 )}
               />
-              <Route path="/dashboard" render={props => (
-                <Dashboard
-                  {...this.state}
-                  {...this.props}
-                  task={this.state.task}
-                />
-              )} />
+              <Route
+                path="/dashboard"
+                render={props => (
+                  <Dashboard
+                    {...this.state}
+                    {...this.props}
+                    task={this.state.task}
+                  />
+                )}
+              />
               <Route path="/learninghub" component={LearningHub} />
               <Route path="/roadmap" component={RoadMap} />
               <Route
