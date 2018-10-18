@@ -52,6 +52,23 @@ class App extends Component {
   addMission = (mission) => {
     this.state.planner[0].visionStatement = mission
   }
+  // edit swot
+  addSwot = (swotie) => {
+    this.state.planner[0].swot = swotie
+  }
+  // editing an Org
+  addOrg = (org) => {
+    this.state.planner[0].orgStructure = org
+  }
+  // editing a Metric
+  addMetrics = (metric) => {
+    this.state.planner[0].successMetrics = metric
+  }
+  // edit summary
+  addSummary = (sum) => {
+    this.state.planner[0].executiveSummary = sum
+  }
+
   render() {
     return (
       <div className="App">
@@ -108,6 +125,7 @@ class App extends Component {
                 {...this.state}
                 {...this.props}
                 planner={this.state.planner}
+                addSummary={this.addSummary}
               />
             )}
             /> />
@@ -125,6 +143,7 @@ class App extends Component {
                 {...this.state}
                 {...this.props}
                 planner={this.state.planner}
+                addMetrics={this.addMetrics}
               />
             )}
             /> />
@@ -133,6 +152,7 @@ class App extends Component {
                 {...this.state}
                 {...this.props}
                 planner={this.state.planner}
+                addOrg={this.addOrg}
               />
             )}
             />/>
@@ -141,6 +161,7 @@ class App extends Component {
                 {...this.state}
                 {...this.props}
                 planner={this.state.planner}
+                addSwot={this.addSwot}
               />
             )}
             />/>

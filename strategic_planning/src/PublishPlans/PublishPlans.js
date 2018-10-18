@@ -19,6 +19,8 @@ class PublishPlans extends Component {
                         <p class="card-text">{this.props.planner[0].swot}</p>
                         <h3>Goals</h3>
                         <p class="card-text">{this.props.planner[0].goals}</p>
+                        <h3>Organization Structure</h3>
+                        <p class="card-text">{this.props.planner[0].orgStructure}</p>
                         <h3>Success Metrics</h3>
                         <p class="card-text">{this.props.planner[0].successMetrics}</p>
                         <h3>Executive Summary</h3>
