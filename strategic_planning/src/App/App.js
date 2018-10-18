@@ -41,10 +41,7 @@ class App extends Component {
   };
 
   addplan = (plan) => {
-    let newPlan = [...this.state.planner, plan]
-    this.setState({
-      birds: newPlan
-    })
+    this.state.planner[0].goals = plan
   }
 
   render() {

@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import SideBar from "../SideBar/SideBar"
 import "./Goals.css"
 class Goals extends Component {
-
+    state = {
+        goals: null
+    }
     handleChange = (e) => {
         this.setState({
             goals: e.target.value
@@ -10,7 +12,7 @@ class Goals extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.addplan(this.state)
+        this.props.addplan(this.state.goals)
     }
     render() {
         return (
