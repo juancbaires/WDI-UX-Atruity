@@ -4,12 +4,12 @@
     background-color: rgba(40, 49, 73, 1);
     height: 100vh;
 } 
-
-li {
-    border-bottom:  rgba(40, 49, 73, 1) solid 1px;
+a {
+    border-bottom: rgb(186, 187, 189) .1px solid;
+    color:white;
 }
 a:hover {
-    color: white;
+    color: grey;
 }
 Link:hover {
     color: white;
