@@ -12,9 +12,9 @@ class PlanBuilder extends Component {
                 <MainDisplay />
                 <form className="planBuild">
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Intro</label>
+                        <label for="exampleFormControlTextarea1">Tutorial</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder="This is where a video would be!"></textarea>
-                        <button type="button" class="btn btn-primary btn-lg">button</button>
+                        <button type="button" class="btn btn-primary btn-lg">Play</button>
                     </div>
                 </form>
             </div>

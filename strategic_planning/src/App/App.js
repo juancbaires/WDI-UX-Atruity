@@ -45,6 +45,7 @@ class App extends Component {
     planner: planner
   };
   //add a goal to planner data
+<<<<<<< HEAD
   addplan = plan => {
     this.state.planner[0].goals = plan;
   };
@@ -52,6 +53,32 @@ class App extends Component {
   addMission = mission => {
     this.state.planner[0].visionStatement = mission;
   };
+=======
+  addplan = (plan) => {
+    this.state.planner[0].goals = plan
+  }
+  //edit mission prop 
+  addMission = (mission) => {
+    this.state.planner[0].visionStatement = mission
+  }
+  // edit swot
+  addSwot = (swotie) => {
+    this.state.planner[0].swot = swotie
+  }
+  // editing an Org
+  addOrg = (org) => {
+    this.state.planner[0].orgStructure = org
+  }
+  // editing a Metric
+  addMetrics = (metric) => {
+    this.state.planner[0].successMetrics = metric
+  }
+  // edit summary
+  addSummary = (sum) => {
+    this.state.planner[0].executiveSummary = sum
+  }
+
+>>>>>>> cf5ebb7d02c4ba61c8ea47e54289539ff2ebd651
   render() {
     return (
       <div className="App">
@@ -90,6 +117,7 @@ class App extends Component {
         </nav>
 
         <main>
+<<<<<<< HEAD
           <div>
             <Switch>
               <Route
@@ -136,6 +164,15 @@ class App extends Component {
                   />
                 )}
               />
+=======
+          <Switch>
+            <Route path="/executivesummary" render={props => (
+              <ExecutiveSummary
+                {...this.state}
+                {...this.props}
+                planner={this.state.planner}
+                addSummary={this.addSummary}
+>>>>>>> cf5ebb7d02c4ba61c8ea47e54289539ff2ebd651
               />
               <Route
                 path="/swot"
@@ -147,6 +184,7 @@ class App extends Component {
                   />
                 )}
               />
+<<<<<<< HEAD
               />
               <Route
                 path="/mission"
@@ -159,6 +197,34 @@ class App extends Component {
                   />
                 )}
               />
+=======
+            )}
+            />/>
+            <Route path="/successmetrics" render={props => (
+              <SuccessMetrics
+                {...this.state}
+                {...this.props}
+                planner={this.state.planner}
+                addMetrics={this.addMetrics}
+              />
+            )}
+            /> />
+            <Route path="/orgstructure" render={props => (
+              <OrgStructure
+                {...this.state}
+                {...this.props}
+                planner={this.state.planner}
+                addOrg={this.addOrg}
+              />
+            )}
+            />/>
+            <Route path="/swot" render={props => (
+              <SWOT
+                {...this.state}
+                {...this.props}
+                planner={this.state.planner}
+                addSwot={this.addSwot}
+>>>>>>> cf5ebb7d02c4ba61c8ea47e54289539ff2ebd651
               />
               <Route
                 path="/planbuilder"
