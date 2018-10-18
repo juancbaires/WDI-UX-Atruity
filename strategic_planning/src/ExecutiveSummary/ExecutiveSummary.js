@@ -23,7 +23,7 @@ class ExecutiveSummary extends Component {
                 <SideBar />
                 <form className="executive">
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Executive Summary</label>
+                        <h2 for="exampleFormControlTextarea1">Executive Summary</h2>
                         <textarea class="form-control" id="" rows="8" placeholder={this.props.planner[0].executiveSummary} onChange={this.handleChange}></textarea>
                         <button onClick={this.handleSubmit} type="button" class="btn btn-primary btn-lg"><FontAwesomeIcon icon="pen" /></button>
                     </div>

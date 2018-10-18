@@ -12,7 +12,7 @@ class PublishPlans extends Component {
                 <SideBar />
                 <div class="card w-50">
                     <div class="card-body">
-                        <h5 class="card-title">{this.props.planner[0].name}</h5>
+                        <h2 class="card-title">{this.props.planner[0].name}</h2>
                         <h3>Vision Statement</h3>
                         <p class="card-text">{this.props.planner[0].visionStatement}</p>
                         <h3>S.W.O.T.</h3>

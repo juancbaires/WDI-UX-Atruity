@@ -22,7 +22,7 @@ class SWOT extends Component {
                 <SideBar />
                 <form className="swot">
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">S.W.O.T.</label>
+                        <h2 for="exampleFormControlTextarea1">S.W.O.T.</h2>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder={this.props.planner[0].swot} onChange={this.handleChange}></textarea>
                         <button onClick={this.handleSubmit} type="button" class="btn btn-primary btn-lg"><FontAwesomeIcon icon="pen" /></button>
                     </div>

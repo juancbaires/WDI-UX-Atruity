@@ -42,7 +42,22 @@ let planner = [
 
 class App extends Component {
   state = {
-    planner: planner
+    planner: planner,
+    task: [
+      {
+        employee: "Juan",
+        task: "Make this mock-up"
+      },
+      {
+        employee: "Luis",
+        task: "Ezy"
+      },
+      {
+        employee: "Felix",
+        task: "do some work!"
+      }
+
+    ]
   };
   //add a goal to planner data
   addplan = (plan) => {
@@ -116,6 +131,7 @@ class App extends Component {
                     {...this.state}
                     {...this.props}
                     planner={this.state.planner}
+                    addSummary={this.addSummary}
                   />
                 )}
               />{" "}
@@ -139,6 +155,7 @@ class App extends Component {
                     {...this.state}
                     {...this.props}
                     planner={this.state.planner}
+                    addMetrics={this.addMetrics}
                   />
                 )}
               />{" "}
@@ -150,6 +167,7 @@ class App extends Component {
                     {...this.state}
                     {...this.props}
                     planner={this.state.planner}
+                    addOrg={this.addOrg}
                   />
                 )}
               />
@@ -161,6 +179,7 @@ class App extends Component {
                     {...this.state}
                     {...this.props}
                     planner={this.state.planner}
+                    addSwot={this.addSwot}
                   />
                 )}
               />
@@ -187,7 +206,13 @@ class App extends Component {
                   />
                 )}
               />
-              <Route path="/dashboard" component={Dashboard} />
+              <Route path="/dashboard" render={props => (
+                <Dashboard
+                  {...this.state}
+                  {...this.props}
+                  task={this.state.task}
+                />
+              )} />
               <Route path="/learninghub" component={LearningHub} />
               <Route path="/roadmap" component={RoadMap} />
               <Route

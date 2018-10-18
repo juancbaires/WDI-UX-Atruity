@@ -22,7 +22,7 @@ class Goals extends Component {
                 <SideBar />
                 <form className="goals">
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Goals</label>
+                        <h2 for="exampleFormControlTextarea1">Goals</h2>
                         <textarea class="form-control" id="goals" rows="8" placeholder={this.props.planner[0].goals} onChange={this.handleChange}></textarea>
                         <button onClick={this.handleSubmit} type="button" class="btn btn-primary btn-lg"><FontAwesomeIcon icon="pen" /></button>
                     </div>

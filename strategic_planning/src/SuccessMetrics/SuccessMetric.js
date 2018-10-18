@@ -22,7 +22,7 @@ class SuccessMetric extends Component {
                 <SideBar />
                 <form className="success">
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Success Metric</label>
+                        <h2 for="exampleFormControlTextarea1">Success Metric</h2>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder={this.props.planner[0].successMetrics} onChange={this.handleChange}></textarea>
                         <button onClick={this.handleSubmit} type="button" class="btn btn-primary btn-lg"><FontAwesomeIcon icon="pen" /></button>
                     </div>

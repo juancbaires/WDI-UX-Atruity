@@ -22,7 +22,7 @@ class OrgStructure extends Component {
                 <SideBar />
                 <form className="org">
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Orginazation Structure</label>
+                        <h2 for="exampleFormControlTextarea1">Orginazation Structure</h2>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder={this.props.planner[0].orgStructure} onChange={this.handleChange}></textarea>
                         <button onClick={this.handleSubmit} type="button" class="btn btn-primary btn-lg"><FontAwesomeIcon icon="pen" /></button>
                     </div>
