@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-color: lightgrey;
-  height: 100vh;
+  height: 100%;
 }
 
 .centerLinks {
@@ -9,15 +9,6 @@
   font-size: 12px;
   height: 50px;
 
-}
-
-.form-group {
-  text-align:left;
-}
-
-.form-group label {
-  text-align:center;
-  width:100%;
 }
 .nav-item {
   color: #a8a4a4;

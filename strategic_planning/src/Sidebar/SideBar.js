@@ -54,7 +54,7 @@ class SideBar extends Component {
           <li class="nav-item">
             <Link to="/mission">
               <a class="nav-link" href="#">
-                Step 2- Mission/Vission
+                Step 2- Mission/Vision
               </a>
             </Link>
           </li>
