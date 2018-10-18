@@ -9,17 +9,13 @@ class Dashboard extends Component {
         <SideBar />
         {this.props.task.map(task => {
           return (
-            <div class="container">
-              <div class="card taskcard w-25">
-                <div class="card-body">
-                  <h5 class="card-title">{task.employee}</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                </div>
+            <div id="tasks" class=" card w-50">
+              <div class="card-body">
+                <h2 class="card-title">{task.employee}</h2>
+                <p class="card-text">{task.task}</p>
               </div>
             </div>
+
           );
         })}
       </div>

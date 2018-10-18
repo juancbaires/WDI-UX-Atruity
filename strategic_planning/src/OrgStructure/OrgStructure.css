@@ -1,6 +1,8 @@
 .org {
     width: 500px;
     margin-left: 400px;
+    margin-top: -500px;
+
 }
 .grey {
     height: 700px;
