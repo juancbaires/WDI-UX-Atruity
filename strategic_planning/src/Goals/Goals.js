@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import SideBar from "../SideBar/SideBar"
 import "./Goals.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 class Goals extends Component {
     state = {
         goals: null
@@ -22,7 +24,7 @@ class Goals extends Component {
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Goals</label>
                         <textarea class="form-control" id="goals" rows="8" placeholder={this.props.planner[0].goals} onChange={this.handleChange}></textarea>
-                        <button onClick={this.handleSubmit} type="button" class="btn btn-primary btn-lg">button</button>
+                        <button onClick={this.handleSubmit} type="button" class="btn btn-primary btn-lg"><FontAwesomeIcon icon="pen" /></button>
                     </div>
                 </form>
             </div>

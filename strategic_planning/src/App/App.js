@@ -15,6 +15,11 @@ import SuccessMetrics from "../SuccessMetrics/SuccessMetric";
 import Goals from "../Goals/Goals";
 import ExecutiveSummary from "../ExecutiveSummary/ExecutiveSummary";
 import logo from "./logo.png"
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPen } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faPen)
 
 let planner = [
   {
@@ -39,11 +44,14 @@ class App extends Component {
   state = {
     planner: planner
   };
-
+  //add a goal to planner data
   addplan = (plan) => {
     this.state.planner[0].goals = plan
   }
-
+  //edit mission prop 
+  addMission = (mission) => {
+    this.state.planner[0].visionStatement = mission
+  }
   render() {
     return (
       <div className="App">
@@ -141,6 +149,7 @@ class App extends Component {
                 {...this.state}
                 {...this.props}
                 planner={this.state.planner}
+                addMission={this.addMission}
               />
             )}
             />/>
