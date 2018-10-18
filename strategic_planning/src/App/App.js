@@ -18,7 +18,7 @@ import logo from "./logo.png"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPen } from '@fortawesome/free-solid-svg-icons'
-
+console.log('this')
 library.add(faPen)
 
 let planner = [
